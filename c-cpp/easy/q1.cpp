@@ -55,7 +55,7 @@ void unionOfKeys(int arr1[], int arr2[], int size1, int size2) {
     }
     
     for (i = 0; i < k; i++) {
-    cout << unionKeys[i] << " ";
+    cout << unionKeys[i] << " "
     }
     cout << endl;
 }

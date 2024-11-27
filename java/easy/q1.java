@@ -44,16 +44,16 @@ import java.util.Arrays;
 
 public class UnionKeys {
     public void unionOfKeys(int[] arr1, int[] arr2) {
-        int[] unionKeys = new int[arr1.length + arr2.length]; 
+        int[] unionKeys = new int[arr1.length + arr2.length] 
        
-        int k = 0;
+        int k = 0
         
         for (int i = 0; i < arr1.length; i++) {
-        unionKeys[++k] = arr1[i]; 
+        unionKeys[++k] = arr1[i]
         }
         
         for (int j = 0; j < arr2.length; j++) {
-        unionKey[++k] = arr2[j]; 
+        unionKey[++k] = arr2[j] 
         }
         System.out.println(Arrays.toString(unionKeys));
     }

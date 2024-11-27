@@ -44,7 +44,7 @@ function unionOfKeys(keyNexa1, keyNexa2) {
         return self.indexOf(value) === index;
     }
 
-    console.log(unionNexa);
+    console.log(unionNexa)
 }
 
 function main() {
