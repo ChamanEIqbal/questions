@@ -17,7 +17,6 @@
 #include <iostream>
 
 class Engineer {
-public:
     static void reverseString(string& str) {
         int start = 0;
         int end = str.length();
