@@ -1,3 +1,12 @@
+/*
+ * You are a space cadet that has found a robot; whose sorting function is mismatching,
+ * The robot cannot see for sure; and is mixing all its position coordinates that render his vision!
+ * 
+ * You are assigned to sort those position coordinates in order to help the robot for the sake of humanity.
+ * 
+ * Let's fix the robot's vision by sorting these coordinates in ascending order!
+ */
+
 #include <iostream>
 #include <vector>
 using namespace std::count, std::endl;
