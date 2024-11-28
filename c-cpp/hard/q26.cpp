@@ -50,7 +50,7 @@ public:
         value--;  
     }
 
-    // Signal method (increment the semaphore)
+    
     void signal() {
         lock_guard<mutex> lock(mtx);
         ++value;  
@@ -141,7 +141,7 @@ void readerThread(ReaderWriter& rw, int readerId) {
     cout << "Rebel " << readerId << " has finished reading.\n";
 }
 
-// Writer thread function
+
 void writerThread(ReaderWriter& rw, int writerId, const std::string& content) {
     this_thread::sleep_for(chrono::milliseconds(200 * writerId));  
     cout << "Priest " << writerId << " is preparing to write to the Codex...\n";
