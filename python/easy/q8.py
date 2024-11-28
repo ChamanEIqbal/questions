@@ -3,6 +3,7 @@
      # The ancient alien technique "Ja'mael" allows merging and sorting star maps in a continuous motion.
      # Your task is to use this method to merge the maps into one sorted array.
      # However, the robot's code has a few flaws in implementing Ja'mael.
+     # Strangely... the galliard module inside the robot is similar to a sorting algorithm you know...
 """
 
 def jamael_technique(A, B):
@@ -30,10 +31,10 @@ def jamael_technique(A, B):
         k += 1
         j += 1
 
-    insertion_sort(result)
+    galliard(result)
     return result
 
-def insertion_sort(array):
+def galliard(array):
     for i in range(len(array)): 
         key = array[i]
         j = i

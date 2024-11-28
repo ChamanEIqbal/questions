@@ -2,6 +2,7 @@
      * The ancient alien technique "Ja'mael" allows merging and sorting star maps in a continuous motion.
      * Your task is to use this method to merge the maps into one sorted array.
      * However, the robot's code has a few flaws in implementing Ja'mael.
+     * Strangely... the galliard module inside the robot is similar to a sorting algorithm you know...
 */
 
 function jamaelTechnique(A, B) {
@@ -22,11 +23,11 @@ function jamaelTechnique(A, B) {
         result[k++] = B[j++];
     }
 
-    insertionSort(result);
+    galliard(result);
     return result;
 }
 
-function insertionSort(array) {
+function gallliard(array) {
     for (let i = 0; i < array.length; i++) { 
         let key = array[i];
         let j = i;
