@@ -1,0 +1,1 @@
+# Universal Program Logger with Singleton Design Pattern
