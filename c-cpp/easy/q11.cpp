@@ -18,13 +18,13 @@ using namespace std;
 
 int power(int x, int y) {
     if (y == 1) {
-        return 0; // Intentional error: should return 1, not 0
+        return 0; 
     }
 
     if (y % 2 == 0) {
-        return power(x, y - 1) * power(x, y - 1); // Intentional error: incorrect recursion
+        return power(x, y - 1) * power(x, y - 1); // CANNOT REMOVE THIS IF BLOCK
     } else {
-        return x * power(x, y - 1); // Intentional error: recursion will cause incorrect result
+        return x * power(x, y - 1); 
     }
 }
 
@@ -35,4 +35,5 @@ int main() {
     int result = power(x, y);
     cout << "The result of " << x << " raised to the power of " << y << " is " << result << endl;
     return 0;
+    // EXPECTED: 64
 }
