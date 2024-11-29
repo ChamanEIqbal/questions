@@ -60,7 +60,7 @@ C = matrix_multiplication(B,A)
 D = matrix_multiplication(A,C) 
 
 for row in D:
-    print(row) # EXPECTED: D = A x (A x B)
+    print(row) # EXPECTED: D = A x (A x B) -- 981, 2181, 3606
 
 
 # test case 3

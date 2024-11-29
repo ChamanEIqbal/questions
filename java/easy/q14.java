@@ -69,7 +69,7 @@ public class MatrixMultiplication {
 
         
             int[][] C = matrixMultiplication(B2, A2);
-            int[][] D = matrixMultiplication(A2, C); // Expected, D = A x (A x B)
+            int[][] D = matrixMultiplication(A2, C); // Expected, D = A x (A x B) -- 981, 2181, 3606
             printres(D);
 
             // Test Case 3:

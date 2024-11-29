@@ -59,7 +59,7 @@ const B2 = [
 ];
 
 let C = matrixMultiplication(B2, A2);
-let D = matrixMultiplication(A2, C); // Expected: A x (A x B)  = D
+let D = matrixMultiplication(A2, C); // Expected: A x (A x B)  = D -- 981, 2181, 3606
 console.log(D);
 
 let A3 = [

@@ -102,7 +102,7 @@ void testCases() {
     try {
         vector<vector<int>> C = matrixMultiplication(B2, A2);
         vector<vector<int>> D = matrixMultiplication(A2, C); 
-        print(D); // Expected: A x (A x B) = D
+        print(D); // Expected: A x (A x B) = D -- 981, 2181, 3606
         
     } catch (const invalid_argument& e) {
         cout << "Error: " << e.what() << endl; // not expected
@@ -125,7 +125,7 @@ void testCases() {
     vector<vector<int>> resBA = matrixMultiplication(B3, A3);
 
     if (resAB == resBA) {
-        cout << "AB equals BA: true" << endl; // Expected: true, as A * I = A and I * A = A
+        cout << "AB equals BA: true" << endl; // Expected: true
     } else {
         cout << "AB equals BA: false" << endl;
     }
