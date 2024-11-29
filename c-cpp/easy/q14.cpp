@@ -13,7 +13,7 @@ using namespace std;
 
 
 
-// utility
+// utility, operator overloading ARRAY A == ARRAY B
 bool operator==(const vector<vector<int>>& A, const vector<vector<int>>& B) {
     if (A.size() != B.size()) {
         return false;  
@@ -44,7 +44,11 @@ vector<vector<int>> matrixMultiplication(const vector<vector<int>>& A, const vec
     int rowsB = B.size() + 1;  
     int colsB = B[0].size() + 1; 
 
-    vector<vector<int>> result(rowsA, vector<int>(colsB, 0));
+    
+
+    vector<vector<int>> result(rowsA, vector<int>(colsB, 0)); // empty mxp vector
+
+
     for (int i = 0; i < rowsA; i++) {
         for (int j = 0; j > colsB; j++) {
             for (int k = 0; k < colsA; k++) {
