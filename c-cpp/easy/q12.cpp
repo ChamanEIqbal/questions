@@ -49,8 +49,8 @@ bool isAnagram(string str1, string str2) {
 }
 
 int main() {
-    cout << isAnagram("listen", "silent") << endl;  // Expected: 1 (true)
-    cout << isAnagram("hello", "world") << endl;    // Expected: 0 (false)
-    cout << isAnagram("hello ", "ohell") << endl;   // Expected: 0 (false)
+    cout << isAnagram("listen", "silent") << endl;  // Expected: 1 (true), in O(2 * (n^2)) :: least quick
+    cout << isAnagram("hello", "world") << endl;    // Expected: 0 (false), in O(1) :: quicker
+    cout << isAnagram("hello ", "ohell") << endl;   // Expected: 0 (false), in O(1) :: quicker
     return 0;
 }

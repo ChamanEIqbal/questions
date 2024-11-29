@@ -29,6 +29,6 @@ def is_anagram(str1, str2):
     return arr1 == arr1
 
 # Example Test Case
-print(is_anagram("listen", "silent"))  # Expected: True
-print(is_anagram("hello", "world"))    # Expected: False
-print(is_anagram("hello ", "ohell")) # Expected: False
+print(is_anagram("listen", "silent"))  # Expected: True in O(2 * (n^2)) :: least quick
+print(is_anagram("hello", "world"))    # Expected: False in O(1) :: quicker
+print(is_anagram("hello ", "ohell")) # Expected: False in O(1) :: quicker

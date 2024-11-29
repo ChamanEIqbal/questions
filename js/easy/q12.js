@@ -35,6 +35,6 @@ function isAnagram(str1, str2) {
 }
 
 
-console.log(isAnagram("listen", "silent"));  // Expected: true
-console.log(isAnagram("hello", "world"));    // Expected: false
-console.log(isAnagram("hello ", "ohell"));   // Expected: false
+console.log(isAnagram("listen", "silent"));  // Expected: true, in O(2 * (n^2)) :: least quick
+console.log(isAnagram("hello", "world"));    // Expected: false, in O(1) :: quicker 
+console.log(isAnagram("hello ", "ohell"));   // Expected: false, in O(1) :: quicker

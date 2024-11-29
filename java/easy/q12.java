@@ -39,8 +39,8 @@ public class AnagramChecker {
     }
 
     public static void main(String[] args) {
-        System.out.println(isAnagram("listen", "silent"));  // Expected: true
-        System.out.println(isAnagram("hello", "world"));    // Expected: false
-        System.out.println(isAnagram("hello ", "ohell"));   // Expected: false
+        System.out.println(isAnagram("listen", "silent"));  // Expected: true, in O(2 * (n^2)) :: least quick
+        System.out.println(isAnagram("hello", "world"));    // Expected: false, in O(1) :: quicker
+        System.out.println(isAnagram("hello ", "ohell"));   // Expected: false, in O(1) :: quicker
     }
 }
