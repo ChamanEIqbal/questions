@@ -133,4 +133,4 @@ def main():
 
 
 if __name__ == "__main__":
-    main()
+    main() # All events listed above; shall occur in the emulation

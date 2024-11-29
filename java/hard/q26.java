@@ -206,4 +206,4 @@ public class CodexSimulation {
             thread.start();
         }
     }
-}
+} // All events listed above; shall occur in the emulation

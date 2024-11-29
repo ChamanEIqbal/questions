@@ -165,4 +165,4 @@ async function main() {
   }
 }
 
-main();
+main(); // All events listed above; shall occur in the emulation

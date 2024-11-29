@@ -176,4 +176,4 @@ int main() {
     }
 
     return 0;
-}
+} // All events listed above; shall occur in the emulation
