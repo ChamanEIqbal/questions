@@ -118,7 +118,6 @@ class UFOFleet {
     }
 
     sortFleet() {
-        if (!this.head || !this.head.next) return;
 
         for (let i = this.head; i !== null; i = i.next) {
             for (let j = i.next; j !== null; j = j.next) {
