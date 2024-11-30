@@ -96,16 +96,12 @@ class UFOFleet {
 
     displayInFlight() {
         let temp = this.head;
-        let found = false;
         while (temp !== null) {
             if (temp.status === "In Flight) {
                 console.log(`UFO ${temp.id} ${temp.name} ${temp.destination} ${temp.status}`);
                 found = true;
             }
             temp = temp.next;
-        }
-        if (!found) {
-            console.log("No UFOs currently in flight.");
         }
     }
 
