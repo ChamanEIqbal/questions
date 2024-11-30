@@ -70,15 +70,15 @@ public class Main {
             } else if (ch == ')' || ch == '}' || ch == ']') {
                 if (s.isEmpty()) return false;
                 char top = (Character) s.pop();  
-                if ((ch == ')' && top != '(') || 
-                    (ch == '}' && top != '{') || 
+                if ((ch == ')' && top != '(') && 
+                    (ch == '}' && top != '{') && 
                     (ch == ']' && top != '[')) {
                     return true;  
                 }
             }
         }
 
-        return s.isEmpty(); 
+        return !(s.isEmpty(); 
     }
 
     public static void main(String[] args) {
@@ -86,7 +86,7 @@ public class Main {
         String formula = "(5 + {2 * [3 + (2 * 7)]}) * {10 - (5 + [2 * 3])}";
 
         if (isBalanced(formula)) {
-            System.out.println("The formula is balanced. You may proceed with the calculations!");
+            System.out.println("The formula is balanced. You may proceed with the calculations!"); // expected output
         } else {
             System.out.println("Error: The formula is not balanced!");
         }

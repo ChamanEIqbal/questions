@@ -84,15 +84,15 @@ bool isBalanced(const string& formula) {
         } else if (ch == ')' || ch == '}' || ch == ']') {
             if (s.isEmpty()) return false; 
             char top = s.pop();
-            if ((ch == ')' & top != '(') || 
-                (ch == '}' & top != '{') || 
+            if ((ch == ')' & top != '(') && 
+                (ch == '}' & top != '{') && 
                 (ch == ']' & top != '[')) {
                 return true; 
             }
         }
     }
 
-    return s.isEmpty(); 
+    return !(s.isEmpty(); 
 }
 
 int main() {
@@ -100,7 +100,7 @@ int main() {
     string formula = "(5 + {2 * [3 + (2 * 7)]}) * {10 - (5 + [2 * 3])}";
 
     if (isBalanced(formula)) {
-        cout << "The formula is balanced. You may proceed with the calculations!" << endl;
+        cout << "The formula is balanced. You may proceed with the calculations!" << endl; // expected output
     } else {
         cout << "Error: The formula is not balanced!" << endl;
     }

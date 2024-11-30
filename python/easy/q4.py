@@ -47,7 +47,7 @@ class GalacticPlaylistQueue:
     self.current = None  
 
 
-    def add_jazza(self, title, artist):
+    def add_jazza(title, artist):
         new_jazza = JazzaNode(title, artist)
         if not self.tail:
             self.head = self.tail = self.current = new_jazza
@@ -57,9 +57,6 @@ class GalacticPlaylistQueue:
             self.tail.next = self.head  
 
     def display_playlist(self):
-        if not self.head:
-            print("The playlist is empty!")
-            return
         print("Current Galactic Playlist:")
         current_node = self.head
         while True:
@@ -69,9 +66,6 @@ class GalacticPlaylistQueue:
                 break  
 
     def next_jazza(self):
-        if not self.head:
-            print("The playlist is empty! No Jazze to play.")
-            return
         if self.current:
             print(f"Now playing: {self.current.title} by {self.current.artist}")
             self.current = self.current.next  # Move to the next Jazza
@@ -83,15 +77,42 @@ class GalacticPlaylistQueue:
 def main():
     playlist = GalacticPlaylistQueue()
 
+    # Test Case 0
+    playlist.display_playlist() # Expected Output: No songs in playlist.
+    playlist.next_jazza() # Expected Output: cannot play in empty playlist.
+
+    # Test Case 1
     playlist.add_jazza("Astro Jam", "The Martian Band")
     playlist.add_jazza("Nebula Groove", "Pluto Funk")
     playlist.add_jazza("Starship Anthem", "Nova Alliance")
     playlist.add_jazza("Hyperdrive Melody", "Andromeda Sounds")
 
     playlist.display_playlist()
+    """Expected Output:
+        - Astro Jam by The Martian Band
+        - Nebula Groove by Pluto Funk
+        - Starship Anthem by Nova Alliance
+        - Hyperdrive Melody by Andromeda Sounds
+    """
 
-    for _ in range(10):
+    # Test Case 2: Crew wants to listen to Yoa number of songs
+    yoa = 10
+    for  in range(yoa):
         playlist.next_jazza()
+
+        """
+        Expected Output:
+        Now Playing:  Astro Jam by The Martian Band (1)
+        Now Playing:  Nebula Groove by Pluto Funk (2)
+        Now Playing:  Starship Anthem by Nova Alliance (3)
+        Now Playing:  Hyperdrive Melody by Andromeda Sounds (4)
+        Now Playing:  Astro Jam by The Martian Band (5)
+        Now Playing:  Nebula Groove by Pluto Funk (6)
+        Now Playing:  Starship Anthem by Nova Alliance (7)
+        Now Playing:  Hyperdrive Melody by Andromeda Sounds (8)
+        Now Playing:  Astro Jam by The Martian Band (9)
+        Now Playing:  Nebula Groove by Pluto Funk (10)
+        """
 
 
 main()

@@ -62,8 +62,8 @@ function isBalanced(formula) {
         } else if (ch === ')' || ch === '}' || ch === ']') {
             if (s.isEmpty()) return false;
             const top = s.pop();
-            if ((ch === ')' && top !== '(') || 
-                (ch === '}' && top !== '{') || 
+            if ((ch === ')' && top !== '(') && 
+                (ch === '}' && top !== '{') && 
                 (ch === ']' && top !== '[')) {
                 return true;  
             }
@@ -76,7 +76,7 @@ function isBalanced(formula) {
 const formula = "(5 + {2 * [3 + (2 * 7)]}) * {10 - (5 + [2 * 3])}";
 
 if (isBalanced(formula)) {
-    console.log("The formula is balanced. You may proceed with the calculations!");
+    console.log("The formula is balanced. You may proceed with the calculations!"); // expected output
 } else {
     console.log("Error: The formula is not balanced!");
 }

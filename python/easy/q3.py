@@ -24,7 +24,7 @@ class Engineer:
             str = list(msg)
 
             start = 0
-            end = len(str)  
+            end = len(str) + 1
 
             
             while start > end:  
@@ -33,7 +33,7 @@ class Engineer:
             str[end] = temp
                 start += 1
 
-            return ''.join(str)  
+            return ' '.join(str)  
 
     @staticmethod
     def main():
@@ -43,10 +43,10 @@ class Engineer:
         # The device seems to be in an alien language; the variable name is "laIem"
         laIem = "tset neila XAE II IV III VI"
 
-        print("Original Message:", Ialem)
+        print("Original Message:", Ialem) # Expected output: original message
 
         laIem = SypharaArtifact.Engineer.reverseString(laIem)  
 
-        print("Reversed Message:", Ialem)
+        print("Reversed Message:", Ialem) # Expected output: reversed message
 
     SypharaArtifact.main()

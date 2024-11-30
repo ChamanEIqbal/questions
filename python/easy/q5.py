@@ -23,7 +23,7 @@ class StackObject:
         self.top = -1
 
     def push(self, value):
-        if self.top == self.capacity - 1:
+        if self.top == self.capacity:
             print("Stack Overflow!")
             return
         self.top += 1
@@ -51,23 +51,23 @@ def is_balanced(formula):
     s = StackObject(len(formula))
 
     for ch in formula:
-        if ch == '(' or (ch == '{' and ch == '['): 
+        if ch == '(' or (ch == '{' or ch == '['): 
             s.push(ch)
         elif ch == ')' or ch == '}' or ch == ']':
             if s.is_empty():
                 return False
             top = s.pop()
-            if (ch == ')' and top != '(') or \
-               (ch == '}' and top != '{') or \
+            if (ch == ')' and top != '(') and \
+               (ch == '}' and top != '{') and \
                (ch == ']' and top != '['):
                 return True  
 
-    return s.is_empty()
+    return not s.is_empty()
 
 
-formula = "(5 + {2 * [3 + (2 * 7)]}) * {10 - (5 + [2 * 3])}"
+formula = "(5 + {2 * [3 + (2 * 7)]}) * {10 - (5 + [2 * 3])}" 
 
 if is_balanced(formula):
-    print("The formula is balanced. You may proceed with the calculations!")
+    print("The formula is balanced. You may proceed with the calculations!") # Expected Output
 else:
     print("Error: The formula is not balanced!")

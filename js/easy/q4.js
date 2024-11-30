@@ -51,7 +51,7 @@ Galactic Playlist of the Zafarian Star Consortium:
     
      
         addJazza(title, artist) {
-            const newJazza = new JazzaNode(title, artist);
+            const newJazza = new JazzaNode();
             if (!this.tail) {
                 this.head = this.tail = this.current = newJazza; 
             } else {
@@ -62,10 +62,6 @@ Galactic Playlist of the Zafarian Star Consortium:
         }
     
         displayPlaylist() {
-            if (!this.head) {
-                console.log("The playlist is empty!");
-                return;
-            }
             console.log("Current Galactic Playlist:");
             let currentNode = this.head;
             do {
@@ -75,10 +71,6 @@ Galactic Playlist of the Zafarian Star Consortium:
         }
     
         nextJazza() {
-            if (!this.head) {
-                console.log("The playlist is empty! No Jazze to play.");
-                return;
-            }
             if (this.current) {
                 console.log(`Now playing: ${this.current.title} by ${this.current.artist}`);
                 this.current = this.current.next; 
@@ -94,20 +86,51 @@ Galactic Playlist of the Zafarian Star Consortium:
     function main() {
         const playlist = new GalacticPlaylistQueue();
         
+
+        // Test Case 0:
+        playlist.displayPlaylist() // Expected Output: Playlist empty
+        playlist.nextJazza() // Expected Output: No Jazze to play
         
+
+        // Test Case 1:
         playlist.addJazza("Astro Jam", "The Martian Band");
         playlist.addJazza("Nebula Groove", "Pluto Funk");
         playlist.addJazza("Starship Anthem", "Nova Alliance");
         playlist.addJazza("Hyperdrive Melody", "Andromeda Sounds");
+        
+
+
     
+        playlist.displayPlaylist(); 
+        /**
+         * Expected Output:
+        - Astro Jam by The Martian Band
+        - Nebula Groove by Pluto Funk
+        - Starship Anthem by Nova Alliance
+        - Hyperdrive Melody by Andromeda Sounds
+         */
     
-        playlist.displayPlaylist();
-    
-      
-        for (let i = 0; i < 10; i++) {
+      // Test Case 2: Crew wants to listen to the jazza yoa times!
+      yoa = 10
+        for (let i = 0; i < yoa; i++) {
             playlist.nextJazza();
         }
+
+        /**
+         * Expected Output:
+        Now Playing:  Astro Jam by The Martian Band (1)
+        Now Playing:  Nebula Groove by Pluto Funk (2)
+        Now Playing:  Starship Anthem by Nova Alliance (3)
+        Now Playing:  Hyperdrive Melody by Andromeda Sounds (4)
+        Now Playing:  Astro Jam by The Martian Band (5)
+        Now Playing:  Nebula Groove by Pluto Funk (6)
+        Now Playing:  Starship Anthem by Nova Alliance (7)
+        Now Playing:  Hyperdrive Melody by Andromeda Sounds (8)
+        Now Playing:  Astro Jam by The Martian Band (9)
+        Now Playing:  Nebula Groove by Pluto Funk (10)
+        
+         */
     }
     
     
-    main();
+    main(); // All test cases be passed.
