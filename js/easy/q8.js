@@ -5,6 +5,7 @@
      * Strangely... the galliard module inside the robot is similar to a sorting algorithm you know...
 */
 
+// std algorithms will cost 12% of the marks
 function jamaelTechnique(A, B) {
     let n = A.length - 1; 
     let m = B.length - 1; 

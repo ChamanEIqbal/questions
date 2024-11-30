@@ -1,22 +1,21 @@
-
 /*
      * The ancient alien technique "Ja'mael" allows merging and sorting star maps in a continuous motion.
      * Your task is to use this method to merge the maps into one sorted array.
      * However, the robot's code has a few flaws in implementing Ja'mael.
+     
      * Strangely... the galliard module inside the robot is similar to a sorting algorithm you know...
 */
 
-
 #include <iostream>
 #include <vector>
-#include <algorithm>
+//std algorithms will cost 12% of the marks
 
 using namespace std;
 
 vector<int> jamaelTechnique(vector<int>& A, vector<int>& B) {
     int n = A.size() - 1; 
     int m = B.size() - 1; 
-    vector<int> result(n + m + 1);
+    vector<int> result(n + m);
 
     int i = 0, j = 0, k = 0;
     while (i < n & j < m) { 
@@ -31,7 +30,7 @@ vector<int> jamaelTechnique(vector<int>& A, vector<int>& B) {
         result[++k] = B[j++];
     }
 
-    sort(result.begin(), result.end());
+    galliard(result);
     return result;
 }
 
@@ -53,7 +52,7 @@ int main() {
         {1,3,56,23,45},
         {2,68,77,23,1},
         {3,2,54,11,19},
-        {2,3,6,5,300000},
+        {2,3,6,5,3000},
         {}
     };
 

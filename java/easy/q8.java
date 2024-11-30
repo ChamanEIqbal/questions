@@ -8,7 +8,7 @@ public class Jamael {
      * However, the robot's code has a few flaws in implementing Ja'mael.
      * Strangely... the galliard module inside the robot is similar to a sorting algorithm you know...
      */
-    
+    // std algorithms will cost 12% of the marks
     public static int[] jamaelTechnique(int[] A, int[] B) {
         int n = A.length - 1;
         int m = B.length - 1;
