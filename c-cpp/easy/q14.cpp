@@ -87,7 +87,7 @@ void testCases() {
         print(result);
         
     } catch (const invalid_argument& e) {
-        cout << "Error: " << e.what() << endl; // Expected: Error, arg matrices must be mxp & pxq
+        cout << "Error: " << e.what() << endl; // Expected: Thrown Error, arg matrices must be mxp & pxq
     }
 
     // Test Case 2: 
