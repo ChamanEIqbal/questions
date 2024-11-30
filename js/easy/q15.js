@@ -40,7 +40,6 @@ class Book {
     }
   
     printAllPages() {
-      console.log("All Pages of the Book:");
       this.pages.forEach((page) => {
         console.log(page);
       });
@@ -50,8 +49,8 @@ class Book {
   
   function writeInBackroom(book, warriors) {
     warriors.forEach((warrior, index) => {
-      book.write(`The warriors stationed in Acre: ${warrior}`);
-      book.write(`Mission number ${index + 1} is now written down.`);
+      book.write(`The warriors stationed in Acre: {warrior}`);
+      book.write(`Mission number {index + 1} is now written down.`);
     })
   }
   
@@ -93,5 +92,6 @@ class Book {
   book.printAllPages(); // Expected: Final book with all written logs from both rooms (backroom first, main room next)
   console.log("-------------------------------------------------");
 
-  // EXPECTED: backRoomsBook == book
+  // EXPECTED: backRoomsBook === book true
+  console.log("Are the books same?, asked Hassan: " + book === backRoomsBook);
   

@@ -113,6 +113,7 @@ public class AssassinLog {
 
         book.printAllPages(); // Expected: Final book with all written logs from both rooms (backrooms first, mainrooms next)
         System.out.println("-------------------------------------------------");
+
+        System.out.println("Are both books the same?, asked Hassan: " + (book1 == book2));  // EXPECTED: true
     }
 } // Expected: Earlier Pages contain backrooms information, later pages contain Main rooms information.
-// EXPECTED: backRoomsBook == book

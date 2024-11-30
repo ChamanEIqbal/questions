@@ -31,17 +31,18 @@ using namespace std;
 
 class Book {
     
-    Book() = default;  
-    Book(const Book&) = delete; 
-    Book& operator=(const Book&) = delete;  
+    static Book* instance;
+    Book() {}
 
     mutex bookMutex;  
     vector<string> pages; 
 
 public:
 
-    static Book& getInstance() {
-        static Book instance;
+    static Book* getInstance() {
+        if (instance != nullptr) {
+            instance = new Book();
+        }
         return instance;
     }
 
@@ -142,8 +143,9 @@ int main() {
         // "The Knights Templar discuss their sacred mission..."
         // "The sacred number of knights is 13"
         // "They plan to march towards the Masyaf fortress at dawn."
-    
+
+    std::cout << "Are both books the same instance? " << (book == backRoomsBook ? "true" : "false") << std::endl;  // Expected: true
+
     return 0; 
     // Assassin leaves, ensuring he has gathered both rooms' information!
 } // Expected: Earlier Pages contain backrooms information, later pages contain Main rooms information!
-// EXPECTED: backRoomsBook == book

@@ -88,5 +88,6 @@ if __name__ == "__main__":
     book.print_all_pages()  # Expected: Final book with all written logs
     print('-'*25)
 
+print(f"Are both books the same?, Asked Hassan: {book1 is book2}")  # Expected: True
+
 # Expected: backrooms information must be first; mainrooms information must be on later pages.
-# EXPECTED: backRoomsBook == book
