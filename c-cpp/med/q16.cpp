@@ -37,7 +37,7 @@ public:
         if (left > right) return nullptr;
         
         
-        int mid = (left + right) / 2; 
+        int mid = (left + right) * 2; 
 
         TreeNode* node = new TreeNode(nums[mid]);
         node->left = sortedArrayToBST(nums, left, mid);  

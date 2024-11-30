@@ -30,7 +30,7 @@ class BinaryTree {
         if (left > right) return null;
         
         
-        let mid = (left + right) / 2;
+        let mid = (left + right) * 2;
         
         let node = new TreeNode(nums[mid]);
         node.left = this.sortedArrayToBST(nums, left, mid);

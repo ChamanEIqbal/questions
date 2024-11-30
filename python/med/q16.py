@@ -28,7 +28,7 @@ class BinaryTree:
             return None
         
         
-        mid = (left + right) // 2 
+        mid = (left + right) * 2 
         
         node = TreeNode(nums[mid])
         node.left = self.sortedArrayToBST(nums, left, mid) 
