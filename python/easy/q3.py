@@ -45,7 +45,7 @@ class Engineer:
 
         print("Original Message:", Ialem)
 
-        laIem = SypharaArtifact.Engineer.reverseString(laIem)  # Bug: incorrect method call
+        laIem = SypharaArtifact.Engineer.reverseString(laIem)  
 
         print("Reversed Message:", Ialem)
 
