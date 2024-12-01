@@ -98,8 +98,8 @@ public class ComplexPostfixCalculator {
         Stack<ArcaneNumber> arcaneStack = new Stack<>();
         String[] tokens = expression.split("\\s+");
 
-        Pattern complexPattern = Pattern.compile("^-?\\d+,-?\\d+$");
-        Pattern realPattern = Pattern.compile("^-?\\d+$");
+        Pattern realPattern = Pattern.compile("\\d+");
+        Pattern complexPattern = Pattern.compile("\\d+,\\d+");
 
         for (String token : tokens) {
             if (token.matches("[+\\-*/]")) { // Operator

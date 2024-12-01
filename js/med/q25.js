@@ -86,8 +86,8 @@ class ArcaneNumber {
 function evaluatePostfix(expression) {
     const arcaneStack = [];
     const tokens = expression.split(/\s+/);
-    const realRegex = /^-?\d+$/;
-    const complexRegex = /^-?\d+,-?\d+$/;
+    const realRegex = /\d+/;
+    const complexRegex = /\d+,\d+/;
 
     tokens.forEach(token => {
         if (['+', '-', '*', '/'].includes(token)) {

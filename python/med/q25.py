@@ -84,8 +84,8 @@ def evaluate_postfix(expression):
     arcane_stack = []
     tokens = expression.split()
 
-    real_regex = re.compile(r"^-?\d+$")
-    complex_regex = re.compile(r"^-?\d+,-?\d+$")
+    real_regex = re.compile(r"\d+")
+    complex_regex = re.compile(r"\d+,\d+")
 
     for token in tokens:
         if token in ['+', '-', '*', '/']:
