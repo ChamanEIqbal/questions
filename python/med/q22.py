@@ -86,6 +86,6 @@ print("Thought Memories:", decoratedThought.getMemory())
 """
 EXAMPLE OUTPUT:
     Thought Description: Basic Thought, Main Idea: Post Structuralism, Enhanced with Linguistic Ambiguity, Enhanced with Semantic Brute Permutations, Enhanced with Concept of Difference, Enhanced with Concept of Repetition, Main Idea: Platonism
-    Thought Significance: 90
+    Thought Significance: 80
     Thought Memories: Deleuzean Essay by Daniel W. Smith, Plato's Republic, Desmond Lee
 """
