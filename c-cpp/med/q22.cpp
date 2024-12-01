@@ -21,6 +21,12 @@
  * PATTERN:
  * The Design Pattern used here is "Decorator".
  * 
+ * Implement the Synapse class to act as the base decorator for extending the functionality of the Thought class. 
+ * Ensure that the decorator classes inherit from Synapse and modify both the getDescription() and 
+ * getSignificance() methods. 
+ * 
+ * The code should produce the expected output as described.
+ * 
  */
 
 
