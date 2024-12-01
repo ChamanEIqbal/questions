@@ -19,8 +19,6 @@
  * 
  * OUTPUTS:
  * Expected.
- * 
- * INPUTS: Cannot be changed.
  */
 
 

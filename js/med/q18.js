@@ -20,8 +20,7 @@
  * OUTPUTS:
  * Expected.
  * 
- * INPUTS: Cannot be changed.
- */
+*/
 
 function dispenseNotes(withdrawalAmount, denominations) {
     let notesCount = new Array(denominations.length).fill(0);
