@@ -12,8 +12,8 @@ Core Concepts:
 Key Python Methods:
 - `.add`: Adds a unique element to a `set`.
 - `in`: Checks if an element exists in a `set`.
-- `sorted`: Sorts the recommendation list using `key=lambda x: x[1]` for mutual friends, 
-  with `reverse=True` for descending order.
+- `sorted`: Sorts the recommendation list using `key=lambda x: x[1]` for mutual friends, for descending order.
+-  you can use reverse=True as well.
 
 Expected Output:
 - A correct listing of vertex : vertices connected
