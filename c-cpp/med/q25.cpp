@@ -44,7 +44,7 @@ The regex used here allows the wizard to validate and parse magical strings, lik
 (e.g., '1,2' for 1 + 2i) and real numbers (e.g., '3' for 3.0). The characters help determine
 whether these magical forms are correctly structured, ensuring the wizards' spells function properly.
 
-In the end, the wizard must remember: regex, like magic, is both an art and a science, you must
+In the end, the wizard must remember: regex, like magic, is both an art and a science.
  */
 
 #include <iostream>
