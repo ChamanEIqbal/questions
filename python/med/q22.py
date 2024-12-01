@@ -21,8 +21,6 @@ different schools of thoughts by decorating them with their known significances.
 PATTERN:
 The Design Pattern used here is "Decorator".
 
-HINT: Synapse extends Thought
-
 """
 
 class Thought:
