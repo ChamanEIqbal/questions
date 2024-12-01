@@ -99,9 +99,11 @@ int main() {
     cout << "Graph:" << endl;
     graph.displayGraph();
     
-    // Expected Output:
+    // Expected Output (flexible):
     /*
-     *  User 4: 3 2 
+     *  User 6: 2
+        User 5:
+        User 4: 3 2 
         User 3: 4 1 
         User 2: 4 1 
         User 1: 3 2

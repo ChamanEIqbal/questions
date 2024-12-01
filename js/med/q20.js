@@ -81,8 +81,30 @@ graph.addFriendship(3, 4);
 console.log("Graph:");
 graph.displayGraph();
 
+    // Expected Output (flexible):
+    /*
+     *  User 6: 2
+        User 5:
+        User 4: 3 2 
+        User 3: 4 1 
+        User 2: 4 1 
+        User 1: 3 2
+    */
+    
+
 console.log("\nFriend Recommendations for User 1:");
 const recommendations = graph.recommendFriends(1);
 for (const [user, count] of recommendations) {
     console.log(`User ${user} (Mutual Friends: ${count})`);
 }
+
+
+// Expected Output:
+    /**
+     * Friend Recommendations for User 1:
+     * Calculating Friend Recommendations for User 1
+     * User 4 has 2 mutual friends with User 1
+     * User 6 has 1 mutual friends with User 1
+     * User 4 (Mutual Friends: 2)
+     * User 6 (Mutual Friends: 1)
+     */

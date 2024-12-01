@@ -67,7 +67,27 @@ graph.add_friendship(3, 4)
 print("Graph:")
 graph.display_graph()
 
+
+""" Expected Output:
+     #  User 6: 2
+        User 5:
+        User 4: 3 2 
+        User 3: 4 1 
+        User 2: 4 1 
+        User 1: 3 2   
+        """
+
 print("\nFriend Recommendations for User 1:")
 recommendations = graph.recommend_friends(1)
 for user, count in recommendations:
     print(f"User {user} (Mutual Friends: {count})")
+
+    """ Expected Output:
+     #    
+        # Friend Recommendations for User 1:
+        # Calculating Friend Recommendations for User 1
+        # User 4 has 2 mutual friends with User 1
+        # User 6 has 1 mutual friends with User 1
+        # User 4 (Mutual Friends: 2)
+        # User 6 (Mutual Friends: 1)
+        """

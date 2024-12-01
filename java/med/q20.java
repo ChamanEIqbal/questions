@@ -93,10 +93,28 @@ class FriendGraph {
         System.out.println("Graph:");
         graph.displayGraph();
 
+            // Expected Output (flexible):
+            /*
+            *  User 6: 2
+                User 5:
+                User 4: 3 2 
+                User 3: 4 1 
+                User 2: 4 1 
+                User 1: 3 2
+            */
         System.out.println("\nFriend Recommendations for User 1:");
         List<Map.Entry<Integer, Integer>> recommendations = graph.recommendFriends(1);
         for (Map.Entry<Integer, Integer> entry : recommendations) {
             System.out.println("User " + entry.getKey() + " (Mutual Friends: " + entry.getValue() + ")");
         }
+            // Expected Output:
+            /**
+             * Friend Recommendations for User 1:
+             * Calculating Friend Recommendations for User 1
+             * User 4 has 2 mutual friends with User 1
+             * User 6 has 1 mutual friends with User 1
+             * User 4 (Mutual Friends: 2)
+             * User 6 (Mutual Friends: 1)
+             */
     }
 }
