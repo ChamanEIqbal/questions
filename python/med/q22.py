@@ -9,6 +9,9 @@ Each thought has a set of memories associated with it. (list of strings)
 You are researching about the history of Philosophy, and you need to evaluate the significance of different
 schools of thoughts across philosophy, with their associated concepts; that hold the following significance:
 
+10 Significance: Enhancement Concept
+20 Significance: Main Idea
+
 Since you are a cognitive scientist, You've opted to think in terms of neural-networks.
 
 TASK:
