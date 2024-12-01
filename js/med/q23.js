@@ -18,7 +18,7 @@
  * After each test case, print out the recursion steps and the final sorted array.
  *  
  * In JavaScript:
- * - You can use the `String.prototype.repeat()` method to repeat a string multiple times, like `' '.repeat(depth * 2)`.
+ * - You can use to repeat a string multiple times: `' '.repeat(depth * 2)`.
  *
  */
 

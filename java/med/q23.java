@@ -17,7 +17,7 @@
  * After each test case, print out the recursion steps and the final sorted array.
  * 
  * * * In Java:
- * - You can use String.repeat() (introduced in Java 11) to repeat a string. OR `new String(new char[depth * 2]).replace("\0", " ")`.
+ * - You can use `new String(new char[depth * 2]).replace("\0", " ")`.
  */
 
 import java.util.Arrays;

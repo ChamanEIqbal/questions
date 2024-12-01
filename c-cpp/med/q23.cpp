@@ -19,7 +19,7 @@
  * 
  *   
  * In C++:
- * - You can use a loop or the `std::string(depth * 2, ' ')` constructor to repeat the space character. Example: `string(depth * 2, ' ')`.
+ * - You can use a loop or the `string(depth * 2, ' ')` constructor to repeat the space character.
  *
  */
 
