@@ -11,7 +11,7 @@
  # So you decide to open the ATM's programming yourself,
  # 
  # CONSTRAINTS:
- # The denominations of dispensing notes are as follows:
+ # The denominations of dispensing notes are following:
  # NOTE 100
  # NOTE 500
  # NOTE 1000
