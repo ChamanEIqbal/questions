@@ -118,7 +118,7 @@ void GalacticPlaylistQueue::add_jazza(const string& title, const string& artist)
             tail->next = newJazza;
             tail = newJazza;
         }
-        head->next = tail
+        tail->next = head;
 }
 
 int main() {
