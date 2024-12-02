@@ -110,16 +110,50 @@ public class GalacticPlaylistQueue {
 
     public static void main(String[] args) {
         GalacticPlaylistQueue playlist = new GalacticPlaylistQueue();
+
+        // Test Case 0:
+        playlist.display_playlist(); // Expected Output: No jazze in playlist...
+        playlist.nextJazza(); // Expected Output: Cannot play empty playlist!
       
+
+        // Test Case 1:
         playlist.add_jazza("Astro Jam", "The Martian Band");
         playlist.add_jazza("Nebula Groove", "Pluto Funk");
         playlist.add_jazza("Starship Anthem", "Nova Alliance");
         playlist.add_jazza("Hyperdrive Melody", "Andromeda Sounds");
 
+
+
         playlist.display_playlist();
 
-        for (int i = 0; i < 10; i++) {
+
+    /**
+         * Expected Output:
+        - Astro Jam by The Martian Band
+        - Nebula Groove by Pluto Funk
+        - Starship Anthem by Nova Alliance
+        - Hyperdrive Melody by Andromeda Sounds
+         */
+
+        
+        int yoa = 10;
+        for (int i = 1; i < yoa; i++) {
             playlist.nextJazza();
         }
+
+    /**
+         * Expected Output:
+        Now Playing:  Astro Jam by The Martian Band (1)
+        Now Playing:  Nebula Groove by Pluto Funk (2)
+        Now Playing:  Starship Anthem by Nova Alliance (3)
+        Now Playing:  Hyperdrive Melody by Andromeda Sounds (4)
+        Now Playing:  Astro Jam by The Martian Band (5)
+        Now Playing:  Nebula Groove by Pluto Funk (6)
+        Now Playing:  Starship Anthem by Nova Alliance (7)
+        Now Playing:  Hyperdrive Melody by Andromeda Sounds (8)
+        Now Playing:  Astro Jam by The Martian Band (9)
+        Now Playing:  Nebula Groove by Pluto Funk (10)
+        
+         */
     }
 }
