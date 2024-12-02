@@ -60,6 +60,7 @@ vague.insert("OO101")
 vague.insert("10011")
 vague.insert("10OO1")
 vague.insert("11O001")
+vague.insert("abcd") # Expected Output: "Cannot add English Alphabets"
 
 # Expected Searching results
 print("Search 'OO101':", vague.search("OO101"))  # True

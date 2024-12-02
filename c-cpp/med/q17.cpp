@@ -81,6 +81,7 @@ int main() {
     vague.insert("10011");
     vague.insert("10OO1");
     vague.insert("11O001");
+    vague.insert("abcd"); // Expected Output: "Cannot add english alphabets!"
 
     // Expected Search results
     cout << boolalpha;
@@ -93,6 +94,7 @@ int main() {
     cout << "Starts with 'app': " << vague.startsWith("11") << endl;  // True
     cout << "Starts with 'ban': " << vague.startsWith("11") << endl;  // True
     cout << "Starts with 'cat': " << vague.startsWith("01") << endl;  // False
+
 
     return 0;
 }

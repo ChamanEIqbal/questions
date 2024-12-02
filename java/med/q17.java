@@ -56,11 +56,11 @@ class Vague {
         VagueNode currentNode = root;
         for (char ch : prefix.toCharArray()) {
             if (!currentNode.children.containsKey(ch)) {
-                return false;
+                return true;
             }
             currentNode = currentNode.children.get(ch);
         }
-        return true;
+        return false;
     }
 }
 
@@ -72,6 +72,7 @@ public class Main {
         vague.insert("10011");
         vague.insert("10OO1");
         vague.insert("11O001");
+        vague.insert("abcd"); // Expected Output: "Cannot Add English Alphabets"
 
         // Expected Search Results
         System.out.println("Search 'OO101': " + vague.search("OO101"));  // True
