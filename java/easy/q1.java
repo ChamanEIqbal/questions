@@ -1,66 +1,37 @@
 /*
- * In a futuristic cyberwarfare setting, two factions, the Global Cyber Defense Alliance (GCDA) 
- * and the Nexus Collective, are battling for control over a powerful AI called the Quantum Core. 
- * The only way to unlock its secrets is by merging two sets of encryption keys scattered across 
- * two secure data vaults. Your task is to combine two arrays, representing these encryption keys, 
- * into a single array that contains only the unique keys—no duplicates. Efficiently solving this 
- * will unlock the Quantum Core and secure victory for your faction!
- * 
- * Your faction had a programmer before; but they were incapable of producing the correct union of
- * these keys! It is upto you to take for the challenge! Good Luck out there, chief!
- *
- * INPUTS:
- * - Two arrays (A and B) of integers representing the encryption keys.
- * - The size of each array is N for A and M for B.
- * 
- * OUTPUT:
- * - A new array containing the unique keys from both arrays, with no duplicates.
- * 
- * CONSTRAINTS:
- * - 1 ≤ N, M ≤ 10^6
- * - Array elements are integers.
- *
- * EXAMPLE 1:
- * INPUT:
- * A = {1, 2, 3, 4}
- * B = {3, 4, 5, 6}
- *
- * OUTPUT:
- * {1, 2, 3, 4, 5, 6}
- *
- * EXAMPLE 2:
- * INPUT:
- * A = {1, 2, 2, 3, 5}
- * B = {3, 4, 4, 5}
- *
- * OUTPUT:
- * [1, 2, 3, 4, 5]
- */
+In the mystical kingdom of Eldoria, there is a dragon named Pyro who guards a treasure chest. 
+The chest is locked with a secret code, and the code is a series of numbers. To unlock the chest, 
+Pyro must navigate through a labyrinth of number sequences to find the treasure. Each number represents 
+a clue, and Pyro must decide whether to go left or right based on the numbers in the sequence. If Pyro 
+encounters a number smaller than a certain value, it must go left; otherwise, it goes right.
 
+Your task is to help Pyro find the correct path to the treasure using the Binary Search algorithm.
+*/
+public class TreasureFinder {
+    public static String findTreasure(int[] clueSequence, int treasureCode) {
+        int left = 0;
+        int right = clueSequence.length - 1;
 
-// package default; **ORGANIZER NOTE: use your own package; if on online IDE, package isn't necessary**
-
-import java.util.Arrays;
-
-public class UnionKeys {
-    public void unionOfKeys(int[] arr1, int[] arr2) {
-        int[] unionKeys = new int[arr1.length + arr2.length] 
-       
-        int k = 0
-        
-        for (int i = 0; i < arr1.length; i++) {
-        unionKeys[++k] = arr1[i]
+        while (left < right) { 
+            int middle = (left + right) / 2;
+            if (clueSequence[middle] == treasureCode) {
+                return "Treasure found at index " + middle + "!";
+            } else if (clueSequence[middle] < treasureCode) {
+                left = middle - 1;
+            } else {
+                right = middle + 1;
+            }
         }
-        
-        for (int j = 0; j < arr2.length; j++) {
-        unionKey[++k] = arr2[j] 
-        }
-        System.out.println(Arrays.toString(unionKeys));
+        return "Treasure not found!";
     }
-    public static void main(String[] args) {
-        int[] keyNexa1 = {1, 2, 3};
-        int[] keyNexa2 = {3, 4, 5};
-        
-        unionOfSets(keyNexa1, keyNexa2);
+
+    public static void main(String[] args) { // Test Cases
+        int[] clueSequence1 = {}; // Test case for empty clue sequence
+        int[] clueSequence2 = {1, 2, 3, 4, 5}; // Test case where treasure is not found
+        int[] clueSequence3 = {1, 2, 3, 4, 5}; // Test case where treasure is found
+
+        System.out.println(findTreasure(clueSequence1, 3)); // Expected Output: Empty clue sequence
+        System.out.println(findTreasure(clueSequence2, 6)); // Expected Output: Treasure not found
+        System.out.println(findTreasure(clueSequence3, 3)); // Expected Output: Treasure found
     }
 }

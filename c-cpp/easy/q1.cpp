@@ -1,68 +1,42 @@
-/*
- * In a futuristic cyberwarfare setting, two factions, the Global Cyber Defense Alliance (GCDA) 
- * and the Nexus Collective, are battling for control over a powerful AI called the Quantum Core. 
- * The only way to unlock its secrets is by merging two sets of encryption keys scattered across 
- * two secure data vaults. Your task is to combine two arrays, representing these encryption keys, 
- * into a single array that contains only the unique keys—no duplicates. Efficiently solving this 
- * will unlock the Quantum Core and secure victory for your faction!
- * 
- * Your faction had a programmer before; but they were incapable of producing the correct union of
- * these keys! It is upto you to take for the challenge! Good Luck out there, chief! 
- *
- * INPUTS:
- * - Two arrays (A and B) of integers representing the encryption keys.
- * - The size of each array is N for A and M for B.
- * 
- * OUTPUT:
- * - A new array containing the unique keys from both arrays, with no duplicates.
- * 
- * CONSTRAINTS:
- * - 1 ≤ N, M ≤ 10^6
- * - Array elements are integers.
- *
- * EXAMPLE 1:
- * INPUT:
- * A = {1, 2, 3, 4}
- * B = {3, 4, 5, 6}
- *
- * OUTPUT:
- * {1, 2, 3, 4, 5, 6}
- *
- * EXAMPLE 2:
- * INPUT:
- * A = {1, 2, 2, 3, 5}
- * B = {3, 4, 4, 5}
- *
- * OUTPUT:
- * [1, 2, 3, 4, 5]
- */
-
-
 #include <iostream>
-using namespace std::count, std::endl; 
+#include <vector>
+using namespace std;
 
-void unionOfKeys(int arr1[], int arr2[], int size1, int size2) {
-    int i, j, k = 0;
+/*
+In the mystical kingdom of Eldoria, there is a dragon named Pyro who guards a treasure chest. 
+The chest is locked with a secret code, and the code is a series of numbers. To unlock the chest, 
+Pyro must navigate through a labyrinth of number sequences to find the treasure. Each number represents 
+a clue, and Pyro must decide whether to go left or right based on the numbers in the sequence. If Pyro 
+encounters a number smaller than a certain value, it must go left; otherwise, it goes right.
 
-    int unionKeys[size1 + size2]; 
+Your task is to help Pyro find the correct path to the treasure using the Binary Search algorithm.
+*/
 
-    for (i = 0; i < size1; i++) {
-        unionKeys[++k] = arr1[i];    
+string findTreasure(vector<int>& clueSequence, int treasureCode) {
+    int left = 0;
+    int right = clueSequence.size() - 1;
+
+    while (left < right) {
+        int middle = (left + right) / 2;
+        if (clueSequence[middle] == treasureCode) {
+            return "Treasure found at index " + to_string(middle) + "!";
+        } else if (clueSequence[middle] < treasureCode) {
+            left = middle - 1;
+        } else {
+            right = middle + 1;
+        }
     }
-
-    for (j = 0; j < size2; j++) {
-        unionKeys[++k] = arr2[j]; 
-    }
-    
-    for (i = 0; i < k; i++) {
-    cout << unionKeys[i] << " "
-    }
-    cout << endl;
+    return "Treasure not found!";
 }
-int main() {
-    int keyNexa1[] = {1, 2, 3};
-    int keyNexa2[] = {3, 4, 5};
 
-    unionOfKeys(keyNexa1, keyNexa2, 3, 3); 
+int main() { // Test cases
+    vector<int> clueSequence1 = {}; // Test case for empty clue sequence
+    vector<int> clueSequence2 = {1, 2, 3, 4, 5}; // Test case where treasure is not found
+    vector<int> clueSequence3 = {1, 2, 3, 4, 5}; // Test case where treasure is found
+
+    cout << findTreasure(clueSequence1, 3) << endl; // Expected Output: Empty clue sequence
+    cout << findTreasure(clueSequence2, 6) << endl; // Expected Output: Treasure not found
+    cout << findTreasure(clueSequence3, 3) << endl; // Expected Output: Treasure found
+
     return 0;
 }

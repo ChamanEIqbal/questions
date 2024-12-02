@@ -1,48 +1,31 @@
-"""
-In a futuristic cyberwarfare setting, two factions, the Global Cyber Defense Alliance (GCDA) 
-and the Nexus Collective, are battling for control over a powerful AI called the Quantum Core. 
-The only way to unlock its secrets is by merging two sets of encryption keys scattered across 
-two secure data vaults. Your task is to combine two arrays, representing these encryption keys, 
-into a single array that contains only the unique keys—no duplicates. Efficiently solving this 
-will unlock the Quantum Core and secure victory for your faction!
+# 
+# In the mystical kingdom of Eldoria, there is a dragon named Pyro who guards a treasure chest. 
+# The chest is locked with a secret code, and the code is a series of numbers. To unlock the chest, 
+# Pyro must navigate through a labyrinth of number sequences to find the treasure. Each number represents 
+# a clue, and Pyro must decide whether to go left or right based on the numbers in the sequence. If Pyro 
+# encounters a number smaller than a certain value, it must go left; otherwise, it goes right.
+#
+# Your task is to help Pyro find the correct path to the treasure using the Binary Search algorithm.
+#
+def find_treasure(clue_sequence, treasure_code):
+    left = 0
+    right = len(clue_sequence) - 1
 
-Your faction had a programmer before; but they were incapable of producing the correct union of
-these keys! It is upto you to take for the challenge! Good Luck out there, chief!
+    while left < right:  
+        middle = (left + right) // 2
+        if clue_sequence[middle] == treasure_code:
+            return f"Treasure found at index {middle}!"
+        elif clue_sequence[middle] < treasure_code:
+            left = middle - 1
+        else:
+            right = middle + 1
+    return "Treasure not found!"
 
-INPUTS:
-- Two arrays (A and B) of integers representing the encryption keys.
-- The size of each array is N for A and M for B.
+# Test cases
+clue_sequence1 = []  # Empty Case
+clue_sequence2 = [1, 2, 3, 4, 5]  # Treasure not found Case
+clue_sequence3 = [1, 2, 3, 4, 5]  # Treasure found Case
 
-OUTPUT:
-- A new array containing the unique keys from both arrays, with no duplicates.
-
-CONSTRAINTS:
-- 1 ≤ N, M ≤ 10^6
-- Array elements are integers.
-
-EXAMPLE 1:
-INPUT:
-A = [1, 2, 3, 4]
-B = [3, 4, 5, 6]
-
-OUTPUT:
-[1, 2, 3, 4, 5, 6]
-
-EXAMPLE 2:
-INPUT:
-A = [1, 2, 2, 3, 5]
-B = [3, 4, 4, 5]
-
-OUTPUT:
-[1, 2, 3, 4, 5]
-"""
-
-def union_of_set(arr1, arr2):
-union_nexa = key_nexa1 + key_nexa2 
-
-
-
-print(union_arr); 
-arr1 = [1, 2, 3]
-arr2 = [3, 4, 5] 
-union_of_keys(arr1, arr2)
+print(find_treasure(clue_sequence1, 3))  # Expected Output: Empty clue sequence 
+print(find_treasure(clue_sequence2, 6))  # Expected Output: Treasure not found
+print(find_treasure(clue_sequence3, 3))  # Expected Output: Treasure found

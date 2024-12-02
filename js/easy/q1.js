@@ -1,55 +1,33 @@
 /*
- * In a futuristic cyberwarfare setting, two factions, the Global Cyber Defense Alliance (GCDA) 
- * and the Nexus Collective, are battling for control over a powerful AI called the Quantum Core. 
- * The only way to unlock its secrets is by merging two sets of encryption keys scattered across 
- * two secure data vaults. Your task is to combine two arrays, representing these encryption keys, 
- * into a single array that contains only the unique keys—no duplicates. Efficiently solving this 
- * will unlock the Quantum Core and secure victory for your faction!
- * 
- * Your faction had a programmer before; but they were incapable of producing the correct union of
- * these keys! It is upto you to take for the challenge! Good Luck out there, chief!
- *
- * INPUTS:
- * - Two arrays (A and B) of integers representing the encryption keys.
- * - The size of each array is N for A and M for B.
- * 
- * OUTPUT:
- * - A new array containing the unique keys from both arrays, with no duplicates.
- * 
- * CONSTRAINTS:
- * - 1 ≤ N, M ≤ 10^6
- * - Array elements are integers.
- *
- * EXAMPLE 1:
- * INPUT:
- * A = {1, 2, 3, 4}
- * B = {3, 4, 5, 6}
- *
- * OUTPUT:
- * {1, 2, 3, 4, 5, 6}
- *
- * EXAMPLE 2:
- * INPUT:
- * A = {1, 2, 2, 3, 5}
- * B = {3, 4, 4, 5}
- *
- * OUTPUT:
- * [1, 2, 3, 4, 5]
+In the mystical kingdom of Eldoria, there is a dragon named Pyro who guards a treasure chest. 
+The chest is locked with a secret code, and the code is a series of numbers. To unlock the chest, 
+Pyro must navigate through a labyrinth of number sequences to find the treasure. Each number represents 
+a clue, and Pyro must decide whether to go left or right based on the numbers in the sequence. If Pyro 
+encounters a number smaller than a certain value, it must go left; otherwise, it goes right.
+
+Your task is to help Pyro find the correct path to the treasure using the Binary Search algorithm.
 */
+function findTreasure(clueSequence, treasureCode) {
+    let left = 0;
+    let right = clueSequence.length - 1;
 
-function unionOfKeys(keyNexa1, keyNexa2) {
-    let unionNexa = keyNexa1.concat(keyNexa2);
-
-    unionNexa = unionNexa.filter(function(value, index.self)) {
-        return self.indexOf(value) === index;
+    while (left < right) { 
+        let middle = Math.floor((left + right) / 2);
+        if (clueSequence[middle] == treasureCode) {
+            return "Treasure found at index " + middle + "!";
+        } else if (clueSequence[middle] < treasureCode) {
+            left = middle - 1;
+        } else {
+            right = middle + 1;
+        }
     }
-
-    console.log(unionNexa)
+    return "Treasure not found!";
 }
 
-function main() {
-    let keyNexa1 = [1,2,3];
-    let keyNexa2 = [3,4,5];
+const clueSequence1 = []; // Test case for empty clue sequence
+const clueSequence2 = [1, 2, 3, 4, 5]; // Test case where treasure is not found
+const clueSequence3 = [1, 2, 3, 4, 5]; // Test case where treasure is found
 
-    unionOfKeys(keyNexa1, keyNexa2);
-}
+console.log(findTreasure(clueSequence1, 3)); // Empty clue sequence
+console.log(findTreasure(clueSequence2, 6)); // Treasure not found
+console.log(findTreasure(clueSequence3, 3)); // Treasure found
