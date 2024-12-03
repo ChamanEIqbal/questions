@@ -98,7 +98,6 @@ int main() {
     // /
     // Dir1
     // Dir2
-    // Bug: Indentation is incorrect.
 
     cout << "\nTest Case 2: Add Files and Display" << endl;
     fs.addFile("File1.txt");
@@ -116,7 +115,6 @@ int main() {
     // Dir2
     // File1.txt
     // File2.txt
-    // Bug: No distinction between directories and files in the display output.
 
     cout << "\nTest Case 3: Create Duplicate Entries" << endl;
     fs.createDirectory("Dir1");
@@ -126,7 +124,6 @@ int main() {
     // Duplicate directory/file names should not be allowed.
     // Actual Output:
     // Duplicate entries are created.
-    // Bug: The code does not check for duplicate names.
 
     cout << "\nTest Case 4: Delete Directory" << endl;
     fs.deleteEntry("Dir1");
@@ -138,7 +135,6 @@ int main() {
     // -[File] File2.txt
     // Actual Output:
     // Entry not found: Dir1
-    // Bug: The delete logic does not handle directories.
 
     cout << "\nTest Case 5: Change Directory" << endl;
     fs.changeDirectory("Dir2");
@@ -150,7 +146,6 @@ int main() {
     // Actual Output:
     // Dir2
     // SubDir1
-    // Bug: Indentation is incorrect.
 
 
     cout << "\nTest Case 6: Memory Management" << endl;
