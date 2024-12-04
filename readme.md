@@ -22,6 +22,8 @@ Speed Debugging competition comprises given questions; i.e programs that are of 
 - Matrix Multiplicatus, Q14
 - Assassin's Singleton, Q15
 
+<hr>
+
 - Master Chomasaka's Teachings, Q16
 - A Vague Data Structure, Q17
 - Please Note That, Q18
@@ -33,6 +35,7 @@ Speed Debugging competition comprises given questions; i.e programs that are of 
 - You're Fired (C++, Python, Java), Observe Me! (Javascript), Q24
 - Regex Wizardry, Q25
 
+<hr>
 
 - From Thy Pupil Cometh Sight, Q26
 - DFA Hojao! Q27
