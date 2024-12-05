@@ -1,6 +1,12 @@
-# Supercomp '24
+<div style="display: flex; align-items: center; justify-content: center; width: 100%;">
+  <img src="https://supercomp.pk/_next/image?url=%2Fassets%2Fimages%2Flogo.png&w=640&q=100" alt="SuperComp Logo" width="240" height="240">
+</div>
+
+# SuperComp '24 
 ## Speed Debugging Competition
 ### Questions
+
+<hr>
 
 Speed Debugging competition comprises given questions; i.e programs that are of varying difficulty. (Easy, Medium, Hard). These programs may contain syntactical errors, or may contain bugs that hinder the intention of the program in question. These questions must be solved under a strict 150 minute timeframe. All submissions must be uploaded to Google Classroom, and all questions are to be provided through Github.
 
